@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 2246px;
+}
+
+.pg{
+    width: 75%;
+    margin: auto;
+    padding-bottom: 120px;
+}
+.pg2{
+    width: 100%;
+}
+
+.menu {
+    animation: slideRight 2s forwards;
+    transform-style: preserve-3d;
+}
+
+.hemant {
+    animation: slideLeft 2s forwards;
+    transform-style: preserve-3d;
+}
+
+@keyframes slideRight {
+    from {
+        transform: translate3d(100%, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg);
+    }
+    to {
+        transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg);
+    }
+}
+
+@keyframes slideLeft {
+    from {
+        transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg);
+    }
+    to {
+        transform: translate3d(100%, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg);
+    }
+}
+
+.head-sub {
+    line-height: 62px;
+    letter-spacing: -2px;
+    font-size: 60px;
+}
