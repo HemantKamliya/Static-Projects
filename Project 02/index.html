@@ -45,11 +45,11 @@
                         <i class="fas fa-bars w-[100px]" id="menu-icon"></i>
                     </button>
                     <ul id="menu" class="flex gap-8 text-white uppercase items-center hidden lg:flex">
-                        <li><a href="#" class="hover:text-[#01bbe8]">Home</a></li>
-                        <li><a href="#" class="hover:text-[#01bbe8]">About</a></li>
-                        <li><a href="#" class="hover:text-[#01bbe8]">Services</a></li>
-                        <li><a href="#" class="hover:text-[#01bbe8]">Why Us</a></li>
-                        <li><a href="#" class="hover:text-[#01bbe8]">Team</a></li>
+                        <li><a href="index.html" class="hover:text-[#01bbe8] text-[#00bbf0]">Home</a></li>
+                        <li><a href="about.html" class="hover:text-[#01bbe8]">About</a></li>
+                        <li><a href="service.html" class="hover:text-[#01bbe8]">Services</a></li>
+                        <li><a href="whyUs.html" class="hover:text-[#01bbe8]">Why Us</a></li>
+                        <li><a href="team.html" class="hover:text-[#01bbe8]">Team</a></li>
                         <li class="flex items-center gap-1">
                             <i class="fa fa-user" aria-hidden="true"></i>
                             <a href="#" class="hover:text-[#01bbe8]">Login</a>
@@ -65,11 +65,11 @@
                 <!-- Fullscreen menu for smaller screens -->
                 <div id="fullscreen-menu" class=" flex flex-col items-center text-white text-xl pt-6 hidden lg:hidden">
                     <ul class="space-y-8 text-center w-full">
-                        <li><a href="#" class="hover:text-[#01bbe8]" onclick="toggleMenu()">Home</a></li>
-                        <li><a href="#" class="hover:text-[#01bbe8]" onclick="toggleMenu()">About</a></li>
-                        <li><a href="#" class="hover:text-[#01bbe8]" onclick="toggleMenu()">Services</a></li>
-                        <li><a href="#" class="hover:text-[#01bbe8]" onclick="toggleMenu()">Why Us</a></li>
-                        <li><a href="#" class="hover:text-[#01bbe8]" onclick="toggleMenu()">Team</a></li>
+                        <li><a href="index.html" class="hover:text-[#01bbe8] text-[#00bbf0]" onclick="toggleMenu()">Home</a></li>
+                        <li><a href="about.html" class="hover:text-[#01bbe8]" onclick="toggleMenu()">About</a></li>
+                        <li><a href="service.html" class="hover:text-[#01bbe8]" onclick="toggleMenu()">Services</a></li>
+                        <li><a href="whyUs.html" class="hover:text-[#01bbe8]" onclick="toggleMenu()">Why Us</a></li>
+                        <li><a href="team.html" class="hover:text-[#01bbe8]" onclick="toggleMenu()">Team</a></li>
                         <li class="flex items-center justify-center gap-2">
                             <i class="fa fa-user" aria-hidden="true"></i>
                             <a href="#" class="hover:text-[#01bbe8]" onclick="toggleMenu()">Login</a>
@@ -85,9 +85,9 @@
                     </button>
                 </div>
             </div>
-            <div class="flex flex-nowrap overflow-hidden">
-                <!-- Content area 1-->
-                <div class="w-screen sm:p-4  md:flex md:flex-row justify-center  pt-20 text-start  mt-10">
+            
+                <!-- Content area-->
+                <div class="w-full sm:p-4  md:flex md:flex-row justify-center  pt-20 text-start  mt-10">
                     <!-- Text area -->
                     <div class="md:w-[40vw] sm:w-5/6 w-full pl-10 pt-20">
                         <h3
@@ -103,49 +103,7 @@
                     </div>
                     <!-- Image area -->
                     <div
-                        class="ml-48 md:w-[40vw] md:h-full md:w-[35vw] md:h-full w-3/6 h-1/6 flex justify-center items-center w-full p-6 pt-20">
-                        <img src="./images/slider-img.png" alt="" class="slides">
-                    </div>
-                </div>
-                <!-- Contant area 2 -->
-                <div class="w-screen sm:p-4  md:flex md:flex-row justify-center  pt-20 text-start  mt-10">
-                    <!-- Text area -->
-                    <div class="md:w-[40vw] sm:w-5/6 w-full pl-10 pt-20">
-                        <h3
-                            class="text-5xl text-white uppercase font-bold py-6 md:pr-[11rem] lg:pr-[11rem] leading-[3.5rem]">
-                            Crypto currency
-                        </h3>
-                        <p class="text-white pr-4 mb-6">Explicabo esse amet tempora quibusdam laudantium, laborum eaque
-                            magnam
-                            fugiat hic? Esse dicta aliquid error repudiandae earum suscipit fugiat molestias, veniam,
-                            vel
-                            architecto veritatis delectus repellat modi impedit sequi.</p>
-                        <button class="mb-6 bg-[#00bbf0] text-white font-bold text-[15px] py-3 px-8">Read More</button>
-                    </div>
-                    <!-- Image area -->
-                    <div
-                        class="ml-48 md:w-[40vw] md:h-full md:w-[35vw] md:h-full w-3/6 h-1/6 flex justify-center items-center w-full p-6 pt-20">
-                        <img src="./images/slider-img.png" alt="" class="slides">
-                    </div>
-                </div>
-                <!-- contant area 3 -->
-                <div class="w-screen sm:p-4  md:flex md:flex-row justify-center  pt-20 text-start  mt-10">
-                    <!-- Text area -->
-                    <div class="md:w-[40vw] sm:w-5/6 w-full pl-10 pt-20">
-                        <h3
-                            class="text-5xl text-white uppercase font-bold py-6 md:pr-[11rem] lg:pr-[11rem] leading-[3.5rem]">
-                            Crypto currency
-                        </h3>
-                        <p class="text-white pr-4 mb-6">Explicabo esse amet tempora quibusdam laudantium, laborum eaque
-                            magnam
-                            fugiat hic? Esse dicta aliquid error repudiandae earum suscipit fugiat molestias, veniam,
-                            vel
-                            architecto veritatis delectus repellat modi impedit sequi.</p>
-                        <button class="mb-6 bg-[#00bbf0] text-white font-bold text-[15px] py-3 px-8">Read More</button>
-                    </div>
-                    <!-- Image area -->
-                    <div
-                        class="ml-48 md:w-[40vw] md:h-full md:w-[35vw] md:h-full w-3/6 h-1/6 flex justify-center items-center w-full p-6 pt-20">
+                        class=" md:w-[40vw] md:h-full md:w-[35vw] md:h-full w-3/6 h-1/6 flex justify-center items-center w-full p-6 pt-20">
                         <img src="./images/slider-img.png" alt="" class="slides">
                     </div>
                 </div>
@@ -435,69 +393,157 @@
             <h3 class="text-[2rem] text-black font-bold pb-2">What says our <span
                     class="text-[#00bbf0]">Customers</span></h3>
         </div>
-    <div>
+        <div>
 
-<!-- ------------------------------------------------------------------------------------ -->
+          
 
-    <div class="w-[82vw]  m-auto flex justify-center gap-12 x-flow">
-        <!-- Client banners -->
-        <div class="w-[510px] boxx-shadow mt-36 relative flex flex-col ">
-            <div class="flex items-center justify-center mb-4 absolute z-40 top-[-50px] left-2 ">
-                <img src="./images/client1.jpg" alt=""
-                    class=" w-[120px] h-[120px] border-4 border-white rounded-full">
+            <div class="banner-container md:w-[60vw] lg:w-[69vw]">
+                <!-- Client banners -->
+                <div class="banner">
+                    <img src="./images/client1.jpg" alt="">
+                    <div class="banner-content">
+                        <div class="flex justify-between flex-row pt-14">
+                            <div>
+                                <h3>LusDen</h3>
+                                <p>magna aliqua. Ut</p>
+                            </div>
+                            <div>
+                                <i class="fa-solid fa-quote-left"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut
+                                labore et dolore magna aliqua. Ut enim ad minim veniam, quis</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Repeat the banner block as needed -->
+                <div class="banner">
+                    <img src="./images/client2.jpg" alt="">
+                    <div class="banner-content">
+                        <div class="flex justify-between flex-row pt-14">
+                            <div>
+                                <h3>Zen court</h3>
+                                <p>magna aliqua. Ut</p>
+                            </div>
+                            <div>
+                                <i class="fa-solid fa-quote-left"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut
+                                labore et dolore magna aliqua. Ut enim ad minim veniam, quis</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="banner">
+                    <img src="./images/client1.jpg" alt="">
+                    <div class="banner-content">
+                        <div class="flex justify-between flex-row pt-14">
+                            <div>
+                                <h3>LusDen</h3>
+                                <p>magna aliqua. Ut</p>
+                            </div>
+                            <div>
+                                <i class="fa-solid fa-quote-left"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut
+                                labore et dolore magna aliqua. Ut enim ad minim veniam, quis</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="banner">
+                    <img src="./images/client2.jpg" alt="">
+                    <div class="banner-content">
+                        <div class="flex justify-between flex-row pt-14">
+                            <div>
+                                <h3>Zen Court</h3>
+                                <p>magna aliqua. Ut</p>
+                            </div>
+                            <div>
+                                <i class="fa-solid fa-quote-left"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut
+                                labore et dolore magna aliqua. Ut enim ad minim veniam, quis</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <!-- cleint Info -->
-            <div class="flex justify-between flex-row pt-20 px-6">
-                <div>
-                    <h3 class="font-semibold">LusDen</h3>
-                    <p>magna aliqua. Ut</p>
+            <div class="slider-buttons pb-20">
+                <button onclick="slideLeft()" class="bg-white shadow text-black w-[50px] h-[50px]">
+                    < </button>
+                        <button onclick="slideRight()" class="bg-white shadow text-black w-[50px] h-[50px]">></button>
+            </div>
+
+        </div>
+        <!-- End of client section -->
+        <div class="w-full flex flex-col lg:flex-row flex-wrap justify-center bg-[#00204a] py-12 gap-6 lg:gap-0
+         ">
+            <!-- Address div -->
+            <div class="flex w-full lg:w-[20vw] text-white text-start flex-col">
+                <div class=" mb-[8px] ">
+                    <h3 class="text-[1.5rem] font-semibold">Address</h3>
                 </div>
-                <div>
-                    <i class="fa-solid fa-quote-left "></i>
+                <!-- Contact Info -->
+                <div class=" cursor-pointer">
+                    <div class="flex flex-row gap-2 items-center mb-2 hover:text-[#00bbf0] cursor-pointer">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>Location</p>
+                    </div>
+                    <div class="flex flex-row gap-2 items-center mb-2 hover:text-[#00bbf0]">
+                        <i class="fa-solid fa-phone"></i>
+                        <p>Call +01 1234567890</p>
+                    </div>
+                    <div class="flex flex-row gap-2 items-center mb-2 hover:text-[#00bbf0]">
+                        <i class="fa-solid fa-envelope"></i>
+                        <p> demo@gmail.com</p>
+                    </div>
+                    <div class="flex flex-row gap-4 items-center mt-4">
+                        <i class="fa-brands fa-facebook-f hover:text-[#00bbf0]"></i>
+                        <i class="fa-brands fa-twitter hover:text-[#00bbf0]"></i>
+                        <i class="fa-brands fa-linkedin hover:text-[#00bbf0]"></i>
+                        <i class="fa-brands fa-instagram hover:text-[#00bbf0]"></i>
+
+                    </div>
                 </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
+                <!-- Address div end -->
+            </div>
+            <!-- Info div -->
+            <div class="flex w-full lg:w-[20vw] text-white text-start flex-col">
+                <div>
+                    <h3 class="text-[1.5rem] font-semibold mb-4">Info</h3>
+                    <p class="text-start mb-4">necessary, making this the first true generator on the Internet. It uses
+                        a dictionary of over 200 Latin words, combined with a handful</p>
+                </div>
+                <!-- Info div end -->
+            </div>
+            <!-- Links div -->
+            <div class="flex w-full lg:w-[20vw] text-white text-start flex-col px-4 justify-center">
+                <div>
+                    <h3 class="text-[1.5rem] font-semibold mb-4">Links</h3>
+                </div>
                 <div class="flex flex-initial flex-col gap-2 cursor-pointer">
-                    <p class="hover:text-[#00bbf0]"><a href="#">Home</a></p>
-                    <p class="hover:text-[#00bbf0]"><a href="#">About</a></p>
-                    <p class="hover:text-[#00bbf0]"><a href="#">Services</a></p>
-                    <p class="hover:text-[#00bbf0]"><a href="#">Why US</a></p>
-                    <p class="hover:text-[#00bbf0]"><a href="#">Team</a></p>
+                    <p class="hover:text-[#00bbf0] text-[#00bbf0]"><a href="index.html">Home</a></p>
+                    <p class="hover:text-[#00bbf0]"><a href="about.html">About</a></p>
+                    <p class="hover:text-[#00bbf0]"><a href="service.html">Services</a></p>
+                    <p class="hover:text-[#00bbf0]"><a href="whyUs.html">Why US</a></p>
+                    <p class="hover:text-[#00bbf0]"><a href="team.html">Team</a></p>
                 </div>
                 <!-- Links div end -->
             </div>
             <!-- Subscribe div -->
             <div class="flex w-full lg:w-[20vw] text-white text-start flex-col">
-=======
-            </div>
-=======
-            </div>
->>>>>>> parent of 35d60b9 (Added next pages)
-            <div  class="w-[490px]">
-                <p class="py-6 px-4">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis </p>
-            </div>
-    
-        </div>
-        <!-- Client banners -->
-        <div class="w-[510px] boxx-shadow mt-36  relative  flex flex-col ">
-            <div class="flex items-center justify-center mb-4 z-40 absolute top-[-50px] left-2 ">
-                <img src="./images/client1.jpg" alt=""
-                    class=" w-[120px] h-[120px] border-4 border-white rounded-full">
-            </div>
-            <!-- cleint Info -->
-            <div class="flex justify-between flex-row pt-20 px-6">
-<<<<<<< HEAD
->>>>>>> parent of 35d60b9 (Added next pages)
-=======
->>>>>>> parent of 35d60b9 (Added next pages)
                 <div>
-                    <h3 class="font-semibold">LusDen</h3>
-                    <p>magna aliqua. Ut</p>
+                    <h3 class="text-[1.5rem] font-semibold mb-4">Subscribe</h3>
                 </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
                 <div class="text-white border-b mb-4">
                     <input type="email" placeholder="Enter email"
                         class="bg-transparent border-none text-[#ffff] font-semibold">
@@ -509,108 +555,14 @@
             </div>
             <!-- Information div end -->
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <!-- Footer -->
-=======
->>>>>>> parent of 094541d (Added animations)
-        <div class="pt-10 flex justify-center"> 
-=======
         <div class="pt-10 flex justify-center">
->>>>>>> 87fd42871e40444a3efffa1f247f08e64df3753d
             <p class="Text-center font-semibold">© 2024 All Rights Reserved By Free Html Templates</p>
-=======
-=======
-                <div>
-                    <i class="fa-solid fa-quote-left "></i>
-                </div>
-            </div>
-            <div class="w-[490px]">
-                <p class="py-6 px-4">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis </p>
-            </div>
-    
         </div>
-        <!-- Client banners -->
-        <div class="w-[510px] boxx-shadow relative mt-36 flex flex-col">
-            <div class="flex items-center justify-center mb-4 absolute top-[-50px] left-2 ">
-                <img src="./images/client1.jpg" alt=""
-                    class=" w-[120px] h-[120px] border-4 border-white rounded-full">
-            </div>
-            <!-- cleint Info -->
-            <div class="flex justify-between flex-row pt-20 px-6">
-                <div>
-                    <h3 class="font-semibold">LusDen</h3>
-                    <p>magna aliqua. Ut</p>
-                </div>
->>>>>>> parent of 35d60b9 (Added next pages)
-                <div>
-                    <i class="fa-solid fa-quote-left "></i>
-                </div>
-            </div>
-            <div class="w-[490px]">
-                <p class="py-6 px-4">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis </p>
-            </div>
-    
-        </div>
-        <!-- Client banners -->
-<<<<<<< HEAD
-        <div class="w-[510px] boxx-shadow relative mt-36 flex flex-col">
-            <div class="flex items-center justify-center mb-4 absolute top-[-50px] left-2 ">
-                <img src="./images/client1.jpg" alt=""
-                    class=" w-[120px] h-[120px] border-4 border-white rounded-full">
-            </div>
-            <!-- cleint Info -->
-            <div class="flex justify-between flex-row pt-20 px-6">
-                <div>
-                    <h3 class="font-semibold">LusDen</h3>
-                    <p>magna aliqua. Ut</p>
-                </div>
-                <div>
-                    <i class="fa-solid fa-quote-left "></i>
-                </div>
-            </div>
-            <div class="w-[490px]">
-                <p class="py-6 px-4">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis </p>
-            </div>
-    
->>>>>>> parent of 35d60b9 (Added next pages)
-        </div>
-        <!-- Client banners -->
-=======
->>>>>>> parent of 35d60b9 (Added next pages)
-        <div class="w-[510px] boxx-shadow relative mt-36  flex flex-col">
-            <div class="flex items-center justify-center mb-4 absolute top-[-50px] left-2 ">
-                <img src="./images/client1.jpg" alt=""
-                    class=" w-[120px] h-[120px] border-4 border-white rounded-full">
-            </div>
-            <!-- cleint Info -->
-            <div class="flex justify-between flex-row pt-20 px-6">
-                <div>
-                    <h3 class="font-semibold">LusDen</h3>
-                    <p>magna aliqua. Ut</p>
-                </div>
-                <div>
-                    <i class="fa-solid fa-quote-left "></i>
-                </div>
-            </div>
-            <div class="w-[490px]">
-                <p class="py-6 px-4">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis </p>
-            </div>
-    
-        </div>
-    </div>
 
 
 
-    <script src="script.js"></script>
+
+        <script src="script.js"></script>
 </body>
 
 </html>
