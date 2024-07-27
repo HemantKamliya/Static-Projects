@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Carosoul -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <script
+        src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+                .content-auto {
+                    content-visibility: auto;
+                }
+            }
+        </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div id="navbar" class="  transition-all duration-500 bg-[#190f5d] ">
+        <div class="flex justify-between items-center py-6 px-6">
+            <h3 class="text-2xl font-bold text-white">Finexo</h3>
+            <button id="menu-toggle" class="text-white lg:hidden">
+                <i class="fas fa-bars w-[100px]" id="menu-icon"></i>
+            </button>
+            <ul id="menu" class="flex gap-8 text-white uppercase items-center hidden lg:flex">
+                <li><a href="index.html" class="hover:text-[#01bbe8]">Home</a></li>
+                <li><a href="about.html" class="hover:text-[#01bbe8]">About</a></li>
+                <li><a href="service.html" class="hover:text-[#01bbe8]">Services</a></li>
+                <li><a href="whyUs.html" class="hover:text-[#01bbe8]">Why Us</a></li>
+                <li><a href="team.html" class="hover:text-[#01bbe8]">Team</a></li>
+                <li class="flex items-center gap-1">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                    <a href="#" class="hover:text-[#01bbe8]">Login</a>
+                </li>
+                <li>
+                    <button class="text-white hover:text-[#01bbe8]">
+                        <i class="fas fa-search" aria-hidden="true"></i>
+                    </button>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Fullscreen menu for smaller screens -->
+        <div id="fullscreen-menu" class=" flex flex-col items-center text-white text-xl pt-6 hidden lg:hidden">
+            <ul class="space-y-8 text-center w-full">
+                <li><a href="index.html" class="hover:text-[#01bbe8]" onclick="toggleMenu()">Home</a></li>
+                <li><a href="about.html" class="hover:text-[#01bbe8]" onclick="toggleMenu()">About</a></li>
+                <li><a href="service.html" class="hover:text-[#01bbe8]" onclick="toggleMenu()">Services</a></li>
+                <li><a href="whyUS.html" class="hover:text-[#01bbe8]" onclick="toggleMenu()">Why Us</a></li>
+                <li><a href="team.html" class="hover:text-[#01bbe8]" onclick="toggleMenu()">Team</a></li>
+                <li class="flex items-center justify-center gap-2">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                    <a href="#" class="hover:text-[#01bbe8]" onclick="toggleMenu()">Login</a>
+                </li>
+                <li>
+                    <button class="hover:text-[#01bbe8]" onclick="toggleMenu()">
+                        <i class="fas fa-search" aria-hidden="true"></i>
+                    </button>
+                </li>
+            </ul>
+            <button class="mt-4 text-white text-2xl absolute top-2 right-6" onclick="toggleMenu()">
+                <i class="fas fa-times" id="close-icon"></i>
+            </button>
+        </div>
+    </div>
+     <!-- Why choose us  -->
+     <div class="w-full flex justify-center items-center flex-col  pt-20 pb-20">
+        <div class="flex items center justify-center mb-6">
+            <h3 class="text-[2rem] text-black font-bold pb-2">Why Choose <span class="text-[#00bbf0]">Us</span></h3>
+        </div>
+        <!-- Banners -->
+        <div class="text-center flex justify center flex-col items-center w-[80vw] mb-6">
+            <div
+                class="flex items-center justify-center w-[120px] h-[120px] border-4 border-[#00204a] rounded-full p-6 mb-4">
+                <img src="./images/w1.png" alt="">
+            </div>
+            <h3 class="font-bold text-2xl text-black mb-4">Expert Management</h3>
+            <p class="text-black text-center">Incidunt odit rerum tenetur alias architecto asperiores omnis cumque
+                doloribus aperiam numquam! Eligendi corrupti, molestias laborum dolores quod nisi vitae voluptate ipsa?
+                In tempore voluptate ducimus officia id, aspernatur nihil. Tempore laborum nesciunt ut veniam, nemo
+                officia ullam repudiandae repellat veritatis unde reiciendis possimus animi autem natus</p>
+        </div>
+        <!-- Second Banner -->
+        <div class="text-center flex justify center flex-col items-center w-[80vw] mb-6">
+            <div
+                class="flex items-center justify-center w-[120px] h-[120px] border-4 border-[#00204a] rounded-full p-6 mb-4">
+                <img src="./images/w2.png" alt="">
+            </div>
+            <h3 class="font-bold text-2xl text-black mb-4">Secure Investment</h3>
+            <p class="text-black text-center">Incidunt odit rerum tenetur alias architecto asperiores omnis cumque
+                doloribus aperiam numquam! Eligendi corrupti, molestias laborum dolores quod nisi vitae voluptate ipsa?
+                In tempore voluptate ducimus officia id, aspernatur nihil. Tempore laborum nesciunt ut veniam, nemo
+                officia ullam repudiandae repellat veritatis unde reiciendis possimus animi autem natus</p>
+        </div>
+        <!-- Third banner -->
+        <div class="text-center flex justify center flex-col items-center w-[80vw] mb-6">
+            <div
+                class="flex items-center justify-center w-[120px] h-[120px] border-4 border-[#00204a] rounded-full p-6 mb-4">
+                <img src="./images/w3.png" alt="">
+            </div>
+            <h3 class="font-bold text-2xl text-black mb-4">Instant Trading</h3>
+            <p class="text-black text-center">Incidunt odit rerum tenetur alias architecto asperiores omnis cumque
+                doloribus aperiam numquam! Eligendi corrupti, molestias laborum dolores quod nisi vitae voluptate ipsa?
+                In tempore voluptate ducimus officia id, aspernatur nihil. Tempore laborum nesciunt ut veniam, nemo
+                officia ullam repudiandae repellat veritatis unde reiciendis possimus animi autem natus</p>
+        </div>
+        <!-- Fourth Banner -->
+        <div class="text-center flex justify center flex-col items-center w-[80vw] mb-10">
+            <div
+                class="flex items-center justify-center w-[120px] h-[120px] border-4 border-[#00204a] rounded-full p-6 mb-4">
+                <img src="./images/w4.png" alt="">
+            </div>
+            <h3 class="font-bold text-2xl text-black mb-4">Happy Customer</h3>
+            <p class="text-black text-center">Incidunt odit rerum tenetur alias architecto asperiores omnis cumque
+                doloribus aperiam numquam! Eligendi corrupti, molestias laborum dolores quod nisi vitae voluptate ipsa?
+                In tempore voluptate ducimus officia id, aspernatur nihil. Tempore laborum nesciunt ut veniam, nemo
+                officia ullam repudiandae repellat veritatis unde reiciendis possimus animi autem natus</p>
+        </div>
+        <Button class=" w-[170px] text-white bg-[#00bbf0] px-[30px] py-[14px]">Read More</Button>
+    </div>
+
+    <!-- Information div -->
+    <div class="w-full flex flex-col lg:flex-row flex-wrap justify-center bg-[#00204a] py-12 gap-6 lg:gap-0
+         ">
+        <!-- Address div -->
+        <div class="flex w-full lg:w-[20vw] text-white text-start flex-col">
+            <div class=" mb-[8px] ">
+                <h3 class="text-[1.5rem] font-semibold">Address</h3>
+            </div>
+            <!-- Contact Info -->
+            <div class=" cursor-pointer">
+                <div class="flex flex-row gap-2 items-center mb-2 hover:text-[#00bbf0] cursor-pointer">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p>Location</p>
+                </div>
+                <div class="flex flex-row gap-2 items-center mb-2 hover:text-[#00bbf0]">
+                    <i class="fa-solid fa-phone"></i>
+                    <p>Call +01 1234567890</p>
+                </div>
+                <div class="flex flex-row gap-2 items-center mb-2 hover:text-[#00bbf0]">
+                    <i class="fa-solid fa-envelope"></i>
+                    <p> demo@gmail.com</p>
+                </div>
+                <div class="flex flex-row gap-4 items-center mt-4">
+                    <i class="fa-brands fa-facebook-f hover:text-[#00bbf0]"></i>
+                    <i class="fa-brands fa-twitter hover:text-[#00bbf0]"></i>
+                    <i class="fa-brands fa-linkedin hover:text-[#00bbf0]"></i>
+                    <i class="fa-brands fa-instagram hover:text-[#00bbf0]"></i>
+
+                </div>
+            </div>
+            <!-- Address div end -->
+        </div>
+        <!-- Info div -->
+        <div class="flex w-full lg:w-[20vw] text-white text-start flex-col">
+            <div>
+                <h3 class="text-[1.5rem] font-semibold mb-4">Info</h3>
+                <p class="text-start mb-4">necessary, making this the first true generator on the Internet. It uses
+                    a dictionary of over 200 Latin words, combined with a handful</p>
+            </div>
+            <!-- Info div end -->
+        </div>
+        <!-- Links div -->
+        <div class="flex w-full lg:w-[20vw] text-white text-start flex-col px-4 justify-center">
+            <div>
+                <h3 class="text-[1.5rem] font-semibold mb-4">Links</h3>
+            </div>
+            <div class="flex flex-initial flex-col gap-2 cursor-pointer">
+                <p class="hover:text-[#00bbf0]"><a href="index.html">Home</a></p>
+                <p class="hover:text-[#00bbf0]"><a href="about.html">About</a></p>
+                <p class="hover:text-[#00bbf0]"><a href="service.html">Services</a></p>
+                <p class="hover:text-[#00bbf0]"><a href="whyUs.html">Why US</a></p>
+                <p class="hover:text-[#00bbf0]"><a href="team.html">Team</a></p>
+            </div>
+            <!-- Links div end -->
+        </div>
+        <!-- Subscribe div -->
+        <div class="flex w-full lg:w-[20vw] text-white text-start flex-col">
+            <div>
+                <h3 class="text-[1.5rem] font-semibold mb-4">Subscribe</h3>
+            </div>
+            <div class="text-white border-b mb-4">
+                <input type="email" placeholder="Enter email"
+                    class="bg-transparent border-none text-[#ffff] font-semibold">
+            </div>
+            <div class="">
+                <Button
+                    class="bg-[#00bbf0] py-2 px-6 w-[250px] font-semibold hover:bg-[#007fa4] text-center">Subscribe</Button>
+            </div>
+        </div>
+        <!-- Information div end -->
+    </div>
+    <div class="py-10 flex justify-center">
+        <p class="Text-center font-semibold text-black">© 2024 All Rights Reserved By Free Html Templates</p>
+    </div>
+
+
+
+    <script>function toggleMenu() {
+            var menu = document.getElementById('fullscreen-menu');
+            var menuToggle = document.getElementById('menu-toggle');
+            var menuIcon = document.getElementById('menu-icon');
+            var closeIcon = document.getElementById('close-icon');
+            var navbar = document.getElementById('navbar');
+            var content = document.getElementById('content');
+
+            menu.classList.toggle('hidden');
+            menuToggle.classList.toggle('hidden');
+
+            if (menu.classList.contains('hidden')) {
+                menuIcon.classList.remove('hidden');
+                closeIcon.classList.add('hidden');
+                navbar.style.height = 'auto';
+                content.style.top = '20%';
+            } else {
+                menuIcon.classList.add('hidden');
+                closeIcon.classList.remove('hidden');
+                navbar.style.height = '70vh';
+                content.style.top = '70vh';
+            }
+        }
+
+        document.getElementById('menu-toggle').addEventListener('click', toggleMenu);
+        document.querySelector('#fullscreen-menu button').addEventListener('click', toggleMenu);
+        document.querySelectorAll('#fullscreen-menu a').forEach(item => {
+            item.addEventListener('click', toggleMenu);
+        });</script>
+</body>
+
+</html>

@@ -1,0 +1,616 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Carosoul -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <script
+        src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Background image -->
+    <div class="h-full blue">
+        <div class="relative z-40">
+            <!-- Navbar -->
+            <div id="navbar" class="  transition-all duration-500 ">
+                <div class="flex justify-between items-center py-6 px-6">
+                    <h3 class="text-2xl font-bold text-white">Finexo</h3>
+                    <button id="menu-toggle" class="text-white lg:hidden">
+                        <i class="fas fa-bars w-[100px]" id="menu-icon"></i>
+                    </button>
+                    <ul id="menu" class="flex gap-8 text-white uppercase items-center hidden lg:flex">
+                        <li><a href="#" class="hover:text-[#01bbe8]">Home</a></li>
+                        <li><a href="#" class="hover:text-[#01bbe8]">About</a></li>
+                        <li><a href="#" class="hover:text-[#01bbe8]">Services</a></li>
+                        <li><a href="#" class="hover:text-[#01bbe8]">Why Us</a></li>
+                        <li><a href="#" class="hover:text-[#01bbe8]">Team</a></li>
+                        <li class="flex items-center gap-1">
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                            <a href="#" class="hover:text-[#01bbe8]">Login</a>
+                        </li>
+                        <li>
+                            <button class="text-white hover:text-[#01bbe8]">
+                                <i class="fas fa-search" aria-hidden="true"></i>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Fullscreen menu for smaller screens -->
+                <div id="fullscreen-menu" class=" flex flex-col items-center text-white text-xl pt-6 hidden lg:hidden">
+                    <ul class="space-y-8 text-center w-full">
+                        <li><a href="#" class="hover:text-[#01bbe8]" onclick="toggleMenu()">Home</a></li>
+                        <li><a href="#" class="hover:text-[#01bbe8]" onclick="toggleMenu()">About</a></li>
+                        <li><a href="#" class="hover:text-[#01bbe8]" onclick="toggleMenu()">Services</a></li>
+                        <li><a href="#" class="hover:text-[#01bbe8]" onclick="toggleMenu()">Why Us</a></li>
+                        <li><a href="#" class="hover:text-[#01bbe8]" onclick="toggleMenu()">Team</a></li>
+                        <li class="flex items-center justify-center gap-2">
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                            <a href="#" class="hover:text-[#01bbe8]" onclick="toggleMenu()">Login</a>
+                        </li>
+                        <li>
+                            <button class="hover:text-[#01bbe8]" onclick="toggleMenu()">
+                                <i class="fas fa-search" aria-hidden="true"></i>
+                            </button>
+                        </li>
+                    </ul>
+                    <button class="mt-4 text-white text-2xl absolute top-2 right-6" onclick="toggleMenu()">
+                        <i class="fas fa-times" id="close-icon"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="flex flex-nowrap overflow-hidden">
+                <!-- Content area 1-->
+                <div class="w-screen sm:p-4  md:flex md:flex-row justify-center  pt-20 text-start  mt-10">
+                    <!-- Text area -->
+                    <div class="md:w-[40vw] sm:w-5/6 w-full pl-10 pt-20">
+                        <h3
+                            class="text-5xl text-white uppercase font-bold py-6 md:pr-[11rem] lg:pr-[11rem] leading-[3.5rem]">
+                            Crypto currency
+                        </h3>
+                        <p class="text-white pr-4 mb-6">Explicabo esse amet tempora quibusdam laudantium, laborum eaque
+                            magnam
+                            fugiat hic? Esse dicta aliquid error repudiandae earum suscipit fugiat molestias, veniam,
+                            vel
+                            architecto veritatis delectus repellat modi impedit sequi.</p>
+                        <button class="mb-6 bg-[#00bbf0] text-white font-bold text-[15px] py-3 px-8">Read More</button>
+                    </div>
+                    <!-- Image area -->
+                    <div
+                        class="ml-48 md:w-[40vw] md:h-full md:w-[35vw] md:h-full w-3/6 h-1/6 flex justify-center items-center w-full p-6 pt-20">
+                        <img src="./images/slider-img.png" alt="" class="slides">
+                    </div>
+                </div>
+                <!-- Contant area 2 -->
+                <div class="w-screen sm:p-4  md:flex md:flex-row justify-center  pt-20 text-start  mt-10">
+                    <!-- Text area -->
+                    <div class="md:w-[40vw] sm:w-5/6 w-full pl-10 pt-20">
+                        <h3
+                            class="text-5xl text-white uppercase font-bold py-6 md:pr-[11rem] lg:pr-[11rem] leading-[3.5rem]">
+                            Crypto currency
+                        </h3>
+                        <p class="text-white pr-4 mb-6">Explicabo esse amet tempora quibusdam laudantium, laborum eaque
+                            magnam
+                            fugiat hic? Esse dicta aliquid error repudiandae earum suscipit fugiat molestias, veniam,
+                            vel
+                            architecto veritatis delectus repellat modi impedit sequi.</p>
+                        <button class="mb-6 bg-[#00bbf0] text-white font-bold text-[15px] py-3 px-8">Read More</button>
+                    </div>
+                    <!-- Image area -->
+                    <div
+                        class="ml-48 md:w-[40vw] md:h-full md:w-[35vw] md:h-full w-3/6 h-1/6 flex justify-center items-center w-full p-6 pt-20">
+                        <img src="./images/slider-img.png" alt="" class="slides">
+                    </div>
+                </div>
+                <!-- contant area 3 -->
+                <div class="w-screen sm:p-4  md:flex md:flex-row justify-center  pt-20 text-start  mt-10">
+                    <!-- Text area -->
+                    <div class="md:w-[40vw] sm:w-5/6 w-full pl-10 pt-20">
+                        <h3
+                            class="text-5xl text-white uppercase font-bold py-6 md:pr-[11rem] lg:pr-[11rem] leading-[3.5rem]">
+                            Crypto currency
+                        </h3>
+                        <p class="text-white pr-4 mb-6">Explicabo esse amet tempora quibusdam laudantium, laborum eaque
+                            magnam
+                            fugiat hic? Esse dicta aliquid error repudiandae earum suscipit fugiat molestias, veniam,
+                            vel
+                            architecto veritatis delectus repellat modi impedit sequi.</p>
+                        <button class="mb-6 bg-[#00bbf0] text-white font-bold text-[15px] py-3 px-8">Read More</button>
+                    </div>
+                    <!-- Image area -->
+                    <div
+                        class="ml-48 md:w-[40vw] md:h-full md:w-[35vw] md:h-full w-3/6 h-1/6 flex justify-center items-center w-full p-6 pt-20">
+                        <img src="./images/slider-img.png" alt="" class="slides">
+                    </div>
+                </div>
+            <!-- Slider div -->
+            <div class="w-full flex flex-row gap-3 justify-center">
+                <span class="text-2xl h-[12px] bg-white w-[12px] rounded-full"></span>
+                <span class="text-2xl h-[12px] bg-white w-[12px] rounded-full"></span>
+                <span class="text-2xl h-[12px] bg-white w-[12px] rounded-full"></span>
+            </div>
+        </div>
+        <!-- <div class="absolute top-0  w-full md:h-full sm:h-screen"> -->
+        <div class=" w-full absolute top-0">
+            <div class="blue-img">
+                <img class="w-full" src="./images/hero-bg.png" alt="bg">
+            </div>
+        </div>
+        <!-- </div>   -->
+    </div>
+    <div class="w-full mt-[15%]  ">
+        <!-- Text area and heading -->
+        <div class="w-full flex flex-col justify-center  text-center pb-4">
+            <h3 class="text-black text-[2rem] font-bold pb-4">Our <span class="text-[#00bbf0]">Services</span></h3>
+            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
+            </p>
+        </div>
+        <!-- Banner divs -->
+        <div class="w-full pb-20">
+            <div class="w-full flex justify-center flex-col lg:flex-row pb-10 gap-6 pt-10 flex-wrap items-center">
+                <!-- Currency div -->
+                <div
+                    class="rounded-[5px] w-full sm:w-[45vw] md:w-[55vw] lg:w-[25vw] flex flex-col pt-6 justify-center items-center bg-[#f8f8f9]">
+                    <div class="px-2 w-[100px] h-[100px]">
+                        <img src="./images/s1.png" alt="">
+                    </div>
+                    <h4 class="text-[20px] uppercase mb-[12px] font-bold">Currency Wallet</h4>
+                    <p class="text-center mb-[8px]">fact that a reader will be distracted by the readable content of a
+                        page
+                        when looking at its layout. The point of using</p>
+                    <button class="font-bold mb-[14px]">Read More</button>
+                </div>
+                <!-- Security Storage div -->
+                <div
+                    class="rounded-[5px] w-full sm:w-[45vw] md:w-[55vw] lg:w-[25vw] flex flex-col pt-6 justify-center items-center bg-[#f8f8f9]">
+                    <div class="px-2 w-[100px] h-[100px]">
+                        <img src="./images/s2.png" alt="">
+                    </div>
+                    <h4 class="text-[20px] uppercase mb-[12px] font-bold">Security Storage</h4>
+                    <p class="text-center mb-[8px]">fact that a reader will be distracted by the readable content of a
+                        page
+                        when looking at its layout. The point of using</p>
+                    <button class="font-bold mb-[14px]">Read More</button>
+                </div>
+                <!-- Export Storage div -->
+                <div
+                    class="rounded-[5px] w-full sm:w-[45vw] md:w-[55vw] lg:w-[25vw] flex flex-col pt-6 justify-center items-center bg-[#f8f8f9]">
+                    <div class="px-2 w-[100px] h-[100px]">
+                        <img src="./images/s3.png" alt="">
+                    </div>
+                    <h4 class="text-[20px] uppercase mb-[12px] font-bold">Export Storage</h4>
+                    <p class="text-center mb-[8px]">fact that a reader will be distracted by the readable content of a
+                        page
+                        when looking at its layout. The point of using</p>
+                    <button class="font-bold mb-[14px]">Read More</button>
+                </div>
+            </div>
+            <div class="flex justify-center"><Button class="text-white bg-[#00bbf0] px-[30px] py-[10px]">View
+                    All</Button></div>
+        </div>
+    </div>
+    <!-- About us div -->
+    <div class="bg-[#00204a] pt-20 pb-10">
+        <div class="text flex flex-col justify-center pb-6 items-center ">
+            <h3 class="text-[2rem] text-white font-bold pb-2">About <span class="text-[#00bbf0]">Us</span></h3>
+            <p class="text-white font-semibold pb-6 text-center">Magni quod blanditiis non minus sed aut voluptatum
+                illum
+                quisquam aspernatur ullam vel beatae rerum ipsum voluptatibus</p>
+        </div>
+        <!-- About us explaination divs image and text areas -->
+        <div class="w-full px-10 flex flex-col lg:flex-row justify-center gap-6">
+            <div class="w-full lg:w-[40vw] p-8 ">
+                <img src="./images/about-img.png" alt="aboutus">
+            </div>
+            <div class="w-full lg:w-[40vw] flex flex-col text-start pt-10">
+                <h3 class="font-bold text-white text-3xl mb-6">We Are Finexo</h3>
+                <p class="text-white font-semibold pr-6 pb-6">There are many variations of passages of Lorem Ipsum
+                    available, but the majority have suffered alteration in some form, by injected humour, or randomised
+                    words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum,
+                    you need to be sure there isn't anything embarrassing hidden in the middle of text. All
+                </p>
+                <p class="text-white font-semibold pr-6 pb-6">
+                    Molestiae odio earum non qui cumque provident voluptates, repellendus exercitationem, possimus at
+                    iste corrupti officiis unde alias eius ducimus reiciendis soluta eveniet. Nobis ullam ab omnis quasi
+                    expedita.
+                </p>
+                <Button class=" w-[170px] text-white bg-[#00bbf0] px-[30px] py-[10px]">Read More</Button>
+            </div>
+        </div>
+    </div>
+    <!-- Why choose us  -->
+    <div class="w-full flex justify-center items-center flex-col  pt-20 pb-20">
+        <div class="flex items center justify-center mb-6">
+            <h3 class="text-[2rem] text-black font-bold pb-2">Why Choose <span class="text-[#00bbf0]">Us</span></h3>
+        </div>
+        <!-- Banners -->
+        <div class="text-center flex justify center flex-col items-center w-[80vw] mb-6">
+            <div
+                class="flex items-center justify-center w-[120px] h-[120px] border-4 border-[#00204a] rounded-full p-6 mb-4">
+                <img src="./images/w1.png" alt="">
+            </div>
+            <h3 class="font-bold text-2xl text-black mb-4">Expert Management</h3>
+            <p class="text-black text-center">Incidunt odit rerum tenetur alias architecto asperiores omnis cumque
+                doloribus aperiam numquam! Eligendi corrupti, molestias laborum dolores quod nisi vitae voluptate ipsa?
+                In tempore voluptate ducimus officia id, aspernatur nihil. Tempore laborum nesciunt ut veniam, nemo
+                officia ullam repudiandae repellat veritatis unde reiciendis possimus animi autem natus</p>
+        </div>
+        <!-- Second Banner -->
+        <div class="text-center flex justify center flex-col items-center w-[80vw] mb-6">
+            <div
+                class="flex items-center justify-center w-[120px] h-[120px] border-4 border-[#00204a] rounded-full p-6 mb-4">
+                <img src="./images/w2.png" alt="">
+            </div>
+            <h3 class="font-bold text-2xl text-black mb-4">Secure Investment</h3>
+            <p class="text-black text-center">Incidunt odit rerum tenetur alias architecto asperiores omnis cumque
+                doloribus aperiam numquam! Eligendi corrupti, molestias laborum dolores quod nisi vitae voluptate ipsa?
+                In tempore voluptate ducimus officia id, aspernatur nihil. Tempore laborum nesciunt ut veniam, nemo
+                officia ullam repudiandae repellat veritatis unde reiciendis possimus animi autem natus</p>
+        </div>
+        <!-- Third banner -->
+        <div class="text-center flex justify center flex-col items-center w-[80vw] mb-6">
+            <div
+                class="flex items-center justify-center w-[120px] h-[120px] border-4 border-[#00204a] rounded-full p-6 mb-4">
+                <img src="./images/w3.png" alt="">
+            </div>
+            <h3 class="font-bold text-2xl text-black mb-4">Instant Trading</h3>
+            <p class="text-black text-center">Incidunt odit rerum tenetur alias architecto asperiores omnis cumque
+                doloribus aperiam numquam! Eligendi corrupti, molestias laborum dolores quod nisi vitae voluptate ipsa?
+                In tempore voluptate ducimus officia id, aspernatur nihil. Tempore laborum nesciunt ut veniam, nemo
+                officia ullam repudiandae repellat veritatis unde reiciendis possimus animi autem natus</p>
+        </div>
+        <!-- Fourth Banner -->
+        <div class="text-center flex justify center flex-col items-center w-[80vw] mb-10">
+            <div
+                class="flex items-center justify-center w-[120px] h-[120px] border-4 border-[#00204a] rounded-full p-6 mb-4">
+                <img src="./images/w4.png" alt="">
+            </div>
+            <h3 class="font-bold text-2xl text-black mb-4">Happy Customer</h3>
+            <p class="text-black text-center">Incidunt odit rerum tenetur alias architecto asperiores omnis cumque
+                doloribus aperiam numquam! Eligendi corrupti, molestias laborum dolores quod nisi vitae voluptate ipsa?
+                In tempore voluptate ducimus officia id, aspernatur nihil. Tempore laborum nesciunt ut veniam, nemo
+                officia ullam repudiandae repellat veritatis unde reiciendis possimus animi autem natus</p>
+        </div>
+        <Button class=" w-[170px] text-white bg-[#00bbf0] px-[30px] py-[14px]">Read More</Button>
+    </div>
+    <!-- Team Members -->
+    <div class="bg-[#00204a] py-16">
+        <div class="flex items center justify-center mb-6">
+            <h3 class="text-[2rem] text-white font-bold pb-2">Our <span class="text-[#00bbf0]">Team</span></h3>
+        </div>
+        <!-- Team banners -->
+        <div class="flex flex-row justify-evenly flex-wrap">
+            <!-- Banner -->
+            <div class="bg-[#00295d] rounded-[5px] p-4 lg:w-[22vw] mb-4">
+                <div class="flex items-center justify-center mb-4 ">
+                    <img src="./images/team-1.jpg" alt=""
+                        class=" w-[120px] h-[120px] border-4 border-white rounded-full">
+                </div>
+                <!-- Details div -->
+                <div>
+                    <h2 class="text-[#00bbf0] text-[1.25rem] text-center mb-2 font-semibold">Joseph Brown</h2>
+                    <p class="text-center text-white font-semibold text-[16px] mb-4">Marketing Head</p>
+                </div>
+                <!-- Social Media Div -->
+                <div class="flex justify-evenly px-6 pt-4">
+                    <a href="#" class="text-white w-[50px] h-[50px]">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="text-white w-[50px] h-[50px]">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-white w-[50px] h-[50px]">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="#" class="text-white w-[50px] h-[50px]">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="#" class="text-white w-[50px] h-[50px]">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+            <!-- Team Banner 2 -->
+            <div class="bg-[#00295d] rounded-[5px] p-4 lg:w-[22vw] mb-4">
+                <div class="flex items-center justify-center mb-4 ">
+                    <img src="./images/team-2.jpg" alt=""
+                        class=" w-[120px] h-[120px] border-4 border-white rounded-full">
+                </div>
+                <!-- Details div -->
+                <div>
+                    <h2 class="text-[#00bbf0] text-[1.25rem] text-center mb-2 font-semibold">Nancy White</h2>
+                    <p class="text-center text-white font-semibold text-[16px] mb-4">Marketing Head</p>
+                </div>
+                <!-- Social Media Div -->
+                <div class="flex justify-evenly px-6 pt-4">
+                    <a href="#" class="text-white w-[50px] h-[50px]">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="text-white w-[50px] h-[50px]">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-white w-[50px] h-[50px]">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="#" class="text-white w-[50px] h-[50px]">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="#" class="text-white w-[50px] h-[50px]">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+            <!-- team banner 3 -->
+            <div class="bg-[#00295d] rounded-[5px] p-4 lg:w-[22vw] mb-4">
+                <div class="flex items-center justify-center mb-4 ">
+                    <img src="./images/team-3.jpg" alt=""
+                        class=" w-[120px] h-[120px] border-4 border-white rounded-full">
+                </div>
+                <!-- Details div -->
+                <div>
+                    <h2 class="text-[#00bbf0] text-[1.25rem] text-center mb-2 font-semibold">Earl Martinez</h2>
+                    <p class="text-center text-white font-semibold text-[16px] mb-4">Marketing Head</p>
+                </div>
+                <!-- Social Media Div -->
+                <div class="flex justify-evenly px-6 pt-4">
+                    <a href="#" class="text-white w-[50px] h-[50px]">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="text-white w-[50px] h-[50px]">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-white w-[50px] h-[50px]">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="#" class="text-white w-[50px] h-[50px]">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="#" class="text-white w-[50px] h-[50px]">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+            <!-- team Banner 4 -->
+            <div class="bg-[#00295d] rounded-[5px] p-4 lg:w-[22vw] mb-4">
+                <div class="flex items-center justify-center mb-4 ">
+                    <img src="./images/team-4.jpg" alt=""
+                        class=" w-[120px] h-[120px] border-4 border-white rounded-full">
+                </div>
+                <!-- Details div -->
+                <div>
+                    <h2 class="text-[#00bbf0] text-[1.25rem] text-center mb-2 font-semibold">Josephine Allard</h2>
+                    <p class="text-center text-white font-semibold text-[16px] mb-4">Marketing Head</p>
+                </div>
+                <!-- Social Media Div -->
+                <div class="flex justify-evenly px-6 pt-4">
+                    <a href="#" class="text-white w-[50px] h-[50px]">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="text-white w-[50px] h-[50px]">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-white w-[50px] h-[50px]">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="#" class="text-white w-[50px] h-[50px]">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="#" class="text-white w-[50px] h-[50px]">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Client Section -->
+    <div class="w-full py-20 flex justify-center flex-col">
+        <div class="flex items center justify-center mb-20">
+            <h3 class="text-[2rem] text-black font-bold pb-2">What says our <span
+                    class="text-[#00bbf0]">Customers</span></h3>
+        </div>
+    <div>
+
+<!-- ------------------------------------------------------------------------------------ -->
+
+    <div class="w-[82vw]  m-auto flex justify-center gap-12 x-flow">
+        <!-- Client banners -->
+        <div class="w-[510px] boxx-shadow mt-36 relative flex flex-col ">
+            <div class="flex items-center justify-center mb-4 absolute z-40 top-[-50px] left-2 ">
+                <img src="./images/client1.jpg" alt=""
+                    class=" w-[120px] h-[120px] border-4 border-white rounded-full">
+            </div>
+            <!-- cleint Info -->
+            <div class="flex justify-between flex-row pt-20 px-6">
+                <div>
+                    <h3 class="font-semibold">LusDen</h3>
+                    <p>magna aliqua. Ut</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-quote-left "></i>
+                </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+                <div class="flex flex-initial flex-col gap-2 cursor-pointer">
+                    <p class="hover:text-[#00bbf0]"><a href="#">Home</a></p>
+                    <p class="hover:text-[#00bbf0]"><a href="#">About</a></p>
+                    <p class="hover:text-[#00bbf0]"><a href="#">Services</a></p>
+                    <p class="hover:text-[#00bbf0]"><a href="#">Why US</a></p>
+                    <p class="hover:text-[#00bbf0]"><a href="#">Team</a></p>
+                </div>
+                <!-- Links div end -->
+            </div>
+            <!-- Subscribe div -->
+            <div class="flex w-full lg:w-[20vw] text-white text-start flex-col">
+=======
+            </div>
+=======
+            </div>
+>>>>>>> parent of 35d60b9 (Added next pages)
+            <div  class="w-[490px]">
+                <p class="py-6 px-4">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis </p>
+            </div>
+    
+        </div>
+        <!-- Client banners -->
+        <div class="w-[510px] boxx-shadow mt-36  relative  flex flex-col ">
+            <div class="flex items-center justify-center mb-4 z-40 absolute top-[-50px] left-2 ">
+                <img src="./images/client1.jpg" alt=""
+                    class=" w-[120px] h-[120px] border-4 border-white rounded-full">
+            </div>
+            <!-- cleint Info -->
+            <div class="flex justify-between flex-row pt-20 px-6">
+<<<<<<< HEAD
+>>>>>>> parent of 35d60b9 (Added next pages)
+=======
+>>>>>>> parent of 35d60b9 (Added next pages)
+                <div>
+                    <h3 class="font-semibold">LusDen</h3>
+                    <p>magna aliqua. Ut</p>
+                </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+                <div class="text-white border-b mb-4">
+                    <input type="email" placeholder="Enter email"
+                        class="bg-transparent border-none text-[#ffff] font-semibold">
+                </div>
+                <div class="">
+                    <Button
+                        class="bg-[#00bbf0] py-2 px-6 w-[250px] font-semibold hover:bg-[#007fa4] text-center">Subscribe</Button>
+                </div>
+            </div>
+            <!-- Information div end -->
+        </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <!-- Footer -->
+=======
+>>>>>>> parent of 094541d (Added animations)
+        <div class="pt-10 flex justify-center"> 
+=======
+        <div class="pt-10 flex justify-center">
+>>>>>>> 87fd42871e40444a3efffa1f247f08e64df3753d
+            <p class="Text-center font-semibold">© 2024 All Rights Reserved By Free Html Templates</p>
+=======
+=======
+                <div>
+                    <i class="fa-solid fa-quote-left "></i>
+                </div>
+            </div>
+            <div class="w-[490px]">
+                <p class="py-6 px-4">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis </p>
+            </div>
+    
+        </div>
+        <!-- Client banners -->
+        <div class="w-[510px] boxx-shadow relative mt-36 flex flex-col">
+            <div class="flex items-center justify-center mb-4 absolute top-[-50px] left-2 ">
+                <img src="./images/client1.jpg" alt=""
+                    class=" w-[120px] h-[120px] border-4 border-white rounded-full">
+            </div>
+            <!-- cleint Info -->
+            <div class="flex justify-between flex-row pt-20 px-6">
+                <div>
+                    <h3 class="font-semibold">LusDen</h3>
+                    <p>magna aliqua. Ut</p>
+                </div>
+>>>>>>> parent of 35d60b9 (Added next pages)
+                <div>
+                    <i class="fa-solid fa-quote-left "></i>
+                </div>
+            </div>
+            <div class="w-[490px]">
+                <p class="py-6 px-4">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis </p>
+            </div>
+    
+        </div>
+        <!-- Client banners -->
+<<<<<<< HEAD
+        <div class="w-[510px] boxx-shadow relative mt-36 flex flex-col">
+            <div class="flex items-center justify-center mb-4 absolute top-[-50px] left-2 ">
+                <img src="./images/client1.jpg" alt=""
+                    class=" w-[120px] h-[120px] border-4 border-white rounded-full">
+            </div>
+            <!-- cleint Info -->
+            <div class="flex justify-between flex-row pt-20 px-6">
+                <div>
+                    <h3 class="font-semibold">LusDen</h3>
+                    <p>magna aliqua. Ut</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-quote-left "></i>
+                </div>
+            </div>
+            <div class="w-[490px]">
+                <p class="py-6 px-4">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis </p>
+            </div>
+    
+>>>>>>> parent of 35d60b9 (Added next pages)
+        </div>
+        <!-- Client banners -->
+=======
+>>>>>>> parent of 35d60b9 (Added next pages)
+        <div class="w-[510px] boxx-shadow relative mt-36  flex flex-col">
+            <div class="flex items-center justify-center mb-4 absolute top-[-50px] left-2 ">
+                <img src="./images/client1.jpg" alt=""
+                    class=" w-[120px] h-[120px] border-4 border-white rounded-full">
+            </div>
+            <!-- cleint Info -->
+            <div class="flex justify-between flex-row pt-20 px-6">
+                <div>
+                    <h3 class="font-semibold">LusDen</h3>
+                    <p>magna aliqua. Ut</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-quote-left "></i>
+                </div>
+            </div>
+            <div class="w-[490px]">
+                <p class="py-6 px-4">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis </p>
+            </div>
+    
+        </div>
+    </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
